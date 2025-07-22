@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle
-model = pickle.load(open('model.sav', 'rb'))    
+
+model = pickle.load(open('model.sav', 'rb'))  
+  
 def predict_cancer(features):
     prediction = model.predict([features])
     return prediction[0]
